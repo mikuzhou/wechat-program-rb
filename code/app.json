@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/news/news",
+    "pages/detail/detail",
+    "pages/sort/sort",
+    "pages/questions/questions",
+    "pages/me/me",
+    "pages/change/change"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "垃圾分类",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/home_bc.png",
+        "selectedIconPath": "image/home_ac.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "垃圾分类",
+        "iconPath": "image/fenlei_bc.png",
+        "selectedIconPath": "image/fenlei_ac.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "image/classify_0.jpg",
+        "selectedIconPath": "image/classify_1.jpg"
+      },
+      {
+        "pagePath": "pages/questions/questions",
+        "text": "答题",
+        "iconPath": "image/order_0.jpg",
+        "selectedIconPath": "image/order_1.jpg"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "image/my_0.jpg",
+        "selectedIconPath": "image/my_1.jpg"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#2db5a1",
+    "borderStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
