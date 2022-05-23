@@ -1,14 +1,9 @@
-/**
- * 作者：编程小石头
- * 微信：2501902696
- */
 App({
   globalData: {
     userInfo: {},
     openid: null,
-    // 配置相关,去百度开发者账号里拿
-    client_id: 'wxdc6b6f06078c0d7a',//替换为你的API_key
-    client_secret: '984d110e037dfe62904715f5df312d27'//替换为你的SECRET_key
+    client_id: 'wxdc6b6f06078c0d7a',
+    client_secret: '984d110e037dfe62904715f5df312d27'
   },
   onLaunch() {
     wx.cloud.init({
@@ -45,7 +40,6 @@ App({
   //获取自己后台的user信息
   _getMyUserInfo() {
     let app = this
-    //优先拿线上的用户数据，线上没有再拿线下
     wx.cloud.database().collection('user')
       .doc(app.globalData.openid)
       .get()
@@ -108,29 +102,6 @@ App({
       curDateTime = curDateTime + minutes + "分";
     return curDateTime;
   },
-  // 保存收获地址:地址里包含用户姓名，电话，地址信息
-  // _saveAddress: function (address) {
-  //   //缓存到sd卡里
-  //   wx.setStorageSync('address', address);
-  //   console.log(address);
-  //   console.log('地址里的电话：' + address.telNumber);
-  // },
-  // 拼接地址信息
-  // _getAddress: function (address) {
-  //   var desc = null;
-  //   if (address) {
-  //     desc = address.provinceName + address.cityName + address.countyName + address.detailInfo;
-  //   }
-  //   return desc;
-  // },
-  // 获取用户所在城市，只能同一个城市的跑腿员才能抢单
-  // _getCity: function (address) {
-  //   var city = null;
-  //   if (address) {
-  //     city = address.cityName;
-  //   }
-  //   return city;
-  // },
   // 错误提示
   showErrorToastUtils: function (e) {
     wx.showModal({
