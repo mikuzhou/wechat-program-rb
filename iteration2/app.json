@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/news/news",
+    "pages/detail/detail",
+    "pages/sort/sort",
+    "pages/questions/questions",
+    "pages/me/me",
+    "pages/change/change"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "垃圾分类小程序",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/home_bc.png",
+        "selectedIconPath": "image/home_ac.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "image/news_bc.png",
+        "selectedIconPath": "image/news_ac.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "科普",
+        "iconPath": "image/classification_bc.png",
+        "selectedIconPath": "image/classification_ac.png"
+      },
+      {
+        "pagePath": "pages/questions/questions",
+        "text": "竞答",
+        "iconPath": "image/question_bc.png",
+        "selectedIconPath": "image/question_ac.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "image/me_bc.png",
+        "selectedIconPath": "image/me_ac.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#2db5a1",
+    "borderStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
