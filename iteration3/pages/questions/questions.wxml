@@ -1,0 +1,68 @@
+<view class="tip">当前第{{current}}题/共{{total}}题</view>
+
+<view>题目分类：{{subject.type2}}</view>
+<view>. </view>
+<view class="type">
+  题型：
+  <text wx:if="{{!subject.C||!subject.D}}">判断题</text>
+  <text wx:elif="{{subject.answer.length>1}}">多选题</text>
+  <text wx:else>单选题</text>
+</view>
+<view>Q：{{subject.title}}</view>
+<view> </view>
+<!-- 单选和判断 -->
+<radio-group wx:if="{{subject.answer.length==1}}" bindchange="selectClick">
+  <!-- A选项 -->
+  <view wx:if="{{subject.A}}" class="item">
+    <radio value="A" checked="{{isSelect}}" />
+    <text>A:{{subject.A}}</text>
+  </view>
+  <!-- B选项 -->
+  <view wx:if="{{subject.B}}" class="item">
+    <radio value="B" checked="{{isSelect}}" />
+    <text>B:{{subject.B}}</text>
+  </view>
+  <!-- C选项 -->
+  <view wx:if="{{subject.C}}" class="item">
+    <radio value="C" checked="{{isSelect}}" />
+    <text>C:{{subject.C}}</text>
+  </view>
+  <!-- D选项 -->
+  <view wx:if="{{subject.D}}" class="item">
+    <radio value="D" checked="{{isSelect}}" />
+    <text>D:{{subject.D}}</text>
+  </view>
+</radio-group>
+<!-- 多选 -->
+<checkbox-group wx:else bindchange="selectClick">
+  <!-- A选项 -->
+  <view wx:if="{{subject.A}}" class="item">
+    <checkbox value="A" checked="{{isSelect}}" />
+    <text>A:{{subject.A}}</text>
+  </view>
+  <!-- B选项 -->
+  <view wx:if="{{subject.B}}" class="item">
+    <checkbox value="B" checked="{{isSelect}}" />
+    <text>B:{{subject.B}}</text>
+  </view>
+  <!-- C选项 -->
+  <view wx:if="{{subject.C}}" class="item">
+    <checkbox value="C" checked="{{isSelect}}" />
+    <text>C:{{subject.C}}</text>
+  </view>
+  <!-- D选项 -->
+  <view wx:if="{{subject.D}}" class="item">
+    <checkbox value="D" checked="{{isSelect}}" />
+    <text>D:{{subject.D}}</text>
+  </view>
+</checkbox-group>
+<!-- 提交按钮 -->
+<button type="primary" bindtap="submit" hidden="{{hideButton}}">下一题</button>
+<!-- 得分和错题 -->
+<view wx:if="{{totalScore>-1}}">
+  <view>本次得分：{{totalScore}}</view>
+  <view>
+    您答错了{{5-totalScore}}道题
+    <text bindtap="seeError" wx:if="{{totalError>0}}">点击查看您的错题集</text>
+  </view>
+</view>

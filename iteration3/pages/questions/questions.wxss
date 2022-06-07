@@ -1,0 +1,19 @@
+.tip {
+  text-align: center;
+  color: red;
+  margin: 15rpx;
+  font-size: 42rpx;
+}
+
+.type {
+  color: hotpink;
+  margin-bottom: 20rpx;
+}
+
+.item {
+  margin: 20rpx;
+}
+
+.pro {
+  margin: 20rpx;
+}

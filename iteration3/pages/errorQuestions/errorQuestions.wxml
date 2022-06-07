@@ -1,0 +1,39 @@
+<view wx:if="{{total>0}}">
+  <view class="tip">当前第{{current+1}}题（共{{total}}道）</view>
+  <view class="type">类型：{{subject.type2}}</view>
+  <view>题目：{{subject.title}}</view>
+  <!-- 选项A -->
+  <view wx:if="{{subject.A}}" class="item">
+    A:{{subject.A}}
+  </view>
+  <!-- 选项B -->
+  <view wx:if="{{subject.B}}" class="item">
+    B:{{subject.B}}
+  </view>
+  <!-- 选项C -->
+  <view wx:if="{{subject.C}}" class="item">
+    C:{{subject.C}}
+  </view>
+  <!-- 选项D -->
+  <view wx:if="{{subject.D}}" class="item">
+    D:{{subject.D}}
+  </view>
+  <!-- <view class="rigth_option">正确答案是：
+    <text wx:for="{{subject.answer}}">{{item}}</text>
+  </view> -->
+  <view class="red">
+    您的选择是：{{subject.userSelect}}
+  </view>
+  <view wx:if="{{subject.errorInfo}}">
+    <text>解析：</text>
+    <view>{{subject.errorInfo}}</view>
+  </view>
+  <view class="btn_root">
+    <button type="primary" size="mini" bindtap="pre">上一个错题</button>
+    <button type="primary" size="mini" bindtap="next">下一个错题</button>
+  </view>
+  <button bindtap="removeError" data-subject="{{subject}}">删除错题</button>
+</view>
+<view wx:else style="text-align:center;margin:60rpx">
+  您真棒，没有错题啦
+</view>
