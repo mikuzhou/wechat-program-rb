@@ -1,0 +1,18 @@
+<view class="content-img">
+    <image src="/image/wengu.png"></image>
+  </view>
+<view class="title">总题数：{{total}}</view>
+<view class="title">错题数：{{errTotal}}</view>
+
+<view wx:if="{{list&&list.length>0}}">
+    <view class="title">总正确率：{{zongZhengquelv}}%</view>
+    <view class="title">分类正确率：</view>
+    <block wx:for="{{list}}" wx:key="index">
+        <view class="item">
+            <text class="item_left">{{item.type}}:</text>
+            正/错：{{item.rigthNum}}/{{item.errNum}}
+            正确率
+            <text class="item_right">{{item.zhengquelv}}%</text>
+        </view>
+    </block>
+</view>

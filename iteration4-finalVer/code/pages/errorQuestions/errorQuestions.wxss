@@ -1,0 +1,29 @@
+.tip {
+  text-align: center;
+  color: red;
+  margin: 15rpx;
+  font-size: 42rpx;
+}
+.type {
+  color: hotpink;
+  margin-bottom: 20rpx;
+}
+
+.item {
+  margin: 20rpx;
+}
+
+.red {
+  color: red;
+}
+
+.rigth_option {
+  font-size: 32rpx;
+  color: green;
+}
+
+.btn_root {
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx;
+}

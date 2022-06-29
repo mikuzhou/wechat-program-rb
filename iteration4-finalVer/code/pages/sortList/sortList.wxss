@@ -1,0 +1,33 @@
+/* 顶部导航栏 */
+.tabs_root {
+  display: flex;
+  background: white;
+}
+
+.tabs_item {
+  height: 80rpx;
+  line-height: 80rpx;
+  flex: 1;
+  font-size: 30rpx;
+  text-align: center;
+  border-bottom: 8rpx solid gainsboro;
+}
+
+.select_tab {
+  color: var(--themeColor);
+  border-bottom: 8rpx solid var(--themeColor);
+}
+
+
+.item_view {
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  padding: 8rpx 50rpx;
+  align-items: center;
+}
+
+.ji {
+  background-color: gainsboro;
+  color: black;
+}

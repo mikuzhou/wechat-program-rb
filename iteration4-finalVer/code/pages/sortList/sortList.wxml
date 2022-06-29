@@ -1,0 +1,12 @@
+<!-- 顶部导航栏 -->
+<view class="tabs_root">
+  <view class="tabs_item {{currentTab==index?'select_tab':''}}" wx:for="{{tabs}}" wx:key="index" bindtap="selectTab" data-index="{{index}}">
+    {{item}}
+  </view>
+</view>
+
+<view wx:for="{{datas}}" wx:key="index">
+  <view class="item_view {{index%2==0?'':'ji'}}">
+    <text>{{item.name}}</text>
+  </view>
+</view>
